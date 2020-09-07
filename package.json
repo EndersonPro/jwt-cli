@@ -1,0 +1,29 @@
+{
+  "name": "@endersonpro/jwtcli",
+  "version": "0.0.1",
+  "description": "Json Web Token cli helper",
+  "main": "index.js",
+  "bin": {
+    "@endersonpro/jwtc": "bin/jwtc",
+    "jwtc": "bin/jwtc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "jwt",
+    "cli",
+    "helper",
+    "decoded",
+    "encoded"
+  ],
+  "author": "Enderson Vizcaino <enjaviga@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "arg": "^4.1.3",
+    "esm": "^3.2.25"
+  }
+}
