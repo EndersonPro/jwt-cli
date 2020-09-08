@@ -1,5 +1,5 @@
 {
-  "name": "@endersonpro/jwtcli",
+  "name": "jwtc",
   "version": "0.0.1",
   "description": "Json Web Token cli helper",
   "main": "index.js",
@@ -21,6 +21,10 @@
     "encoded"
   ],
   "author": "Enderson Vizcaino <enjaviga@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EndersonPro/jwt-cli"
+    },
   "license": "ISC",
   "dependencies": {
     "arg": "^4.1.3",
