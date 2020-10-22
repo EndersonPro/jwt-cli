@@ -22,15 +22,19 @@ function atob(str) {
     return Buffer.from(str, 'base64').toString('binary');
 }
 
-function jwtDecoded (token) {
-    var base64Url = token.split('.')[1];
-    var base64 = decodeURIComponent(atob(base64Url).split('').map(function(c) {
-        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-    }).join(''));
-    return JSON.parse(base64);
+function forHuman (object) {
+    const keys = Object.keys(object);
+    if (keys.includes('iat')) {
+        object.iat_human = new Date(object['iat']).toISOString()
+    }
+    return object;
 }
+
+
+const jwtDecoded = (token) => JSON.parse(decodeURIComponent(atob(token.split('.')[1]).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join('')));
 
 export function cli (args) {
     let options = parseArgs(args);
-    console.log(jwtDecoded(options.skipPrompts));
+    // console.log(typeof JSON.parse(jwtDecoded(options.skipPrompts)));
+    console.log(forHuman(jwtDecoded(options.skipPrompts)));
 }

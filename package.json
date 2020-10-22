@@ -1,5 +1,5 @@
 {
-  "name": "jwtc",
+  "name": "@endersonpro/jwtc",
   "version": "0.0.1",
   "description": "Json Web Token cli helper",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [
     "jwt",
